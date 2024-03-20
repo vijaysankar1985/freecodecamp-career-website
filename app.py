@@ -1,5 +1,5 @@
 # importing necessary modules
-from flask import Flask
+from flask import Flask, render_template
 
 #app instance initialisation
 app = Flask(__name__)
@@ -7,7 +7,8 @@ app = Flask(__name__)
 #Registerd a minimalistic route
 @app.route('/')
 def hello_world():
-  return "Hello World!"
+  return render_template('home.html')
+  
 
 #Running the app
 if __name__=="__main__":
